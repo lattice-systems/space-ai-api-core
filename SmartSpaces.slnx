@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="SmartSpaces.API/SmartSpaces.API.csproj" />
+  <Project Path="SmartSpaces.Application/SmartSpaces.Application.csproj" />
+  <Project Path="SmartSpaces.Domain/SmartSpaces.Domain.csproj" />
+  <Project Path="SmartSpaces.Infrastructure/SmartSpaces.Infrastructure.csproj" />
+  <Project Path="SmartSpaces.Shared/SmartSpaces.Shared.csproj" />
+  <Project Path="SmartSpaces.UnitTests/SmartSpaces.UnitTests.csproj" />
+</Solution>
