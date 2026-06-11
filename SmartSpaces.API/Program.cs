@@ -1,10 +1,17 @@
-using SmartSpaces.Application;
 using SmartSpaces.API.Exceptions;
+using SmartSpaces.Application;
+using Microsoft.EntityFrameworkCore;
+using SmartSpaces.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplicationServices();
 builder.Services.AddControllers();
+
+//Metodo de conexion a PostgreSQL
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(connectionString));
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
